@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1" name="but">кнопка</button>
+    <button id="b2" class="bu2">кнопка</button>
+    <div>
+        <button id="b3" class="bu2">кнопка</button>
+    </div>
+
+    <script>
+        //первый способ получения доступа к элементу
+        /*let bt = document.getElementById('b1');
+        bt.style.fontSize = '30px';
+        
+        document.getElementById('b1').style.fontSize = '30px';*/
+        
+        //второй способ получения доступа к элементу
+        /*
+        let bt = document.getElementsByTagName('button');
+            bt[2].style.width = '200px';*/
+
+        //трейтий способ
+        /*let bt = document.getElementsByName('but');
+        console.log(bt);*/
+
+        //четвертый способ
+        /*let bt = document.getElementsByClassName('bu2');
+        console.log(bt);*/
+
+        //пятый способ
+        /*let bt = document.querySelectorAll('div button.bu2');
+        console.log(bt);*/
+
+        //шестой способ
+        let bt = document.querySelector('#b1');
+        console.log(bt);
+
+        /*
+        setTimeout(function(){
+            bt.style.color = 'red';
+        }, 3000);*/
+
+        let start = setInterval(function(){
+            /*document.body.append(document.createElement('button')); */
+            console.log('+'); 
+        }, 500);
+        
+        setTimeout(function(){
+            clearInterval(start);
+        }, 5000);
+    </script>
+</body>
+</html>
